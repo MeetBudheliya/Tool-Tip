@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToolTipDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9A-8j-pt0">
+                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pEj-GC-rh8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img" translatesAutoresizingMaskIntoConstraints="NO" id="NWm-Eo-FMg">
+                                <rect key="frame" x="76.666666666666686" y="318.66666666666669" width="240" height="240.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="50H-0c-PUx"/>
+                                    <constraint firstAttribute="height" constant="240" id="p5I-ou-daU"/>
+                                </constraints>
+                            </imageView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lcm-Xk-t7S">
+                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="GfK-yG-XL4"/>
+                                    <tabBarItem systemItem="more" id="JLX-0i-5MT"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lcm-Xk-t7S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Xb-Rp-s16"/>
+                            <constraint firstItem="z9A-8j-pt0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EVP-EH-jn7"/>
+                            <constraint firstItem="Lcm-Xk-t7S" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KzX-n0-rao"/>
+                            <constraint firstItem="NWm-Eo-FMg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="OEU-c3-lvo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z9A-8j-pt0" secondAttribute="trailing" id="bBI-Gx-9EE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Lcm-Xk-t7S" secondAttribute="bottom" id="bD9-WS-bgA"/>
+                            <constraint firstItem="z9A-8j-pt0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mks-rJ-tog"/>
+                            <constraint firstItem="NWm-Eo-FMg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rv3-0i-odP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="center" destination="NWm-Eo-FMg" id="E7I-O6-1SC"/>
+                        <outlet property="lbl" destination="z9A-8j-pt0" id="6TB-BE-z4U"/>
+                        <outlet property="tabbar" destination="Lcm-Xk-t7S" id="SB2-0Z-JE9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img" width="2638" height="3952"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
